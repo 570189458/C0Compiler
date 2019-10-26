@@ -1,0 +1,60 @@
+//变量定义部分
+int a, b, c;
+int d, e, f;
+int ans, x1, x2;
+int num;
+//自定义函数定义
+int add()
+{
+    c = a + b;
+    return (c);
+}
+int compare()
+{
+
+    f = d / e;	// f为1表示d大于e  f为0表示d小于e
+    x1 = f;
+    x2 = 0;
+    if(equal())
+    {
+        printf(0);	//0表示不等
+        return 1;
+    }
+    else
+    {
+        printf(1);	//1表示相等
+        return 0;
+    }
+}
+int equal()
+{
+    ans = x1 - x2;
+    return ans;
+}
+//主函数
+void main()
+{
+    scanf(a);
+    scanf(b);
+    add();
+    printf(c);
+    
+    scanf(d);
+    scanf(e);
+    if(compare())
+    {
+        printf(1);		//d大于或等于e
+    }
+    else
+    {
+        printf(0);		//d小于e
+    }
+
+    num = 10;
+    while(num)
+    {
+        printf(num);
+		num = num - 1;
+    }
+	return;
+}
