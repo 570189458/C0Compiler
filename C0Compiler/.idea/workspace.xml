@@ -19,7 +19,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -70,6 +71,11 @@
       <updated>1571828398932</updated>
       <workItem from="1571828401362" duration="304000" />
       <workItem from="1571828870354" duration="6289000" />
+      <workItem from="1572055370795" duration="60000" />
+      <workItem from="1572417797985" duration="72000" />
+      <workItem from="1572417891621" duration="1135000" />
+      <workItem from="1572419046520" duration="1518000" />
+      <workItem from="1572420582579" duration="586000" />
     </task>
     <servers />
   </component>
@@ -81,8 +87,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/Exceuter.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="6" />
+          <line>202</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/Exceuter.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

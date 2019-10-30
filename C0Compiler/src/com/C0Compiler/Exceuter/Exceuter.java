@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
-//C:\Users\XiuMing\Desktop\stack.txt
+//C:\Users\XiuMing\Desktop\C0com\stack.txt
 
 public class Exceuter {
     //基地址所在位置
@@ -42,19 +42,22 @@ public class Exceuter {
         execute();
     }
 
-    //
+    //遍历所有指令进行解析
     private void execute()
     {
         while(current_index < DirectList.size())
         {
-            System.out.println(current_index+" "+DirectList.size());
+            //System.out.println(current_index+" "+DirectList.size());
             System.out.println(DirectList.get(current_index).get_Direct_name()+" "+DirectList.get(current_index).get_t()+" "+DirectList.get(current_index).get_a());
+//            if(!stack.empty()) {
+//                System.out.println(stack.peek());
+//            }
             analyze(current_index);
             current_index++;
         }
     }
 
-    //
+    //解析指令
     private void analyze(int index)
     {
         int t = DirectList.get(index).get_t();
@@ -120,13 +123,13 @@ public class Exceuter {
         }
     }
 
-    //
+    //将常数值取到栈顶，a为常数值
     private void direct_LIT(int t, int a)
     {
         stack.push(a);
     }
 
-    //
+    //将变量值取到栈顶，a为相对地址，t为层数
     private void direct_LOD(int t, int a)
     {
         if(t == 0)
@@ -139,7 +142,7 @@ public class Exceuter {
         }
     }
 
-    //
+    //将栈顶内容送入某变量单元中，a为相对地址，t为层数
     private void direct_STO(int t, int a)
     {
         if(t == 0)
@@ -152,7 +155,7 @@ public class Exceuter {
         }
     }
 
-    //
+    //调用函数，a为函数地址
     private void direct_CAL(int t, int a)
     {
         int base = stack.size();
@@ -162,22 +165,22 @@ public class Exceuter {
         current_index = a - 1;
     }
 
-    //
+    //在运行栈中为被调用的过程开辟a个单元的数据区
     private void direct_INT(int t, int a)
     {
         for (int i = 0; i < a; i++)
-        {
-            stack.push(0);
-        }
+    {
+        stack.push(0);
+    }
     }
 
-    //
+    //无条件跳转至a地址
     private void direct_JMP(int t, int a)
     {
         current_index = a - 1;
     }
 
-    //
+    //条件跳转，当栈顶值为0，则跳转至a地址，否则顺序执行
     private void direct_JPC(int t, int a)
     {
         if(stack.peek() == 0)
@@ -186,48 +189,51 @@ public class Exceuter {
         }
     }
 
-    //
+    //次栈顶与栈顶相加，退两个栈元素，结果值进栈
     private void direct_ADD(int t, int a)
     {
         int x = stack.pop();
         int y = stack.pop();
-        stack.push(x + y);
+        stack.push(y + x);
     }
 
-    //
+    //次栈顶减去栈顶，退两个栈元素，结果值进栈
     private void direct_SUB(int t, int a)
     {
         int x = stack.pop();
         int y = stack.pop();
-        stack.push(x - y);
+        stack.push(y - x);
     }
 
-    //
+    //次栈顶乘以栈顶，退两个栈元素，结果值进栈
     private void direct_MUL(int t, int a)
     {
         int x = stack.pop();
         int y = stack.pop();
-        stack.push(x * y);
+        stack.push(y * x);
     }
 
-    //
+    //次栈顶除以栈顶，退两个栈元素，结果值进栈
     private void direct_DIV(int t, int a)
     {
         //除数不为0
-        //TODO
         int x = stack.pop();
         int y = stack.pop();
-        stack.push(x / y);
+        if(x == 0)
+        {
+            throw new ArithmeticException();
+        }
+        stack.push(y / x);
     }
 
-    //
+    //从命令行读入一个输入置于栈顶
     private void direct_RED(int t, int a)
     {
         int tmpint = sc.nextInt();
         stack.push(tmpint);
     }
 
-    //
+    //栈顶值输出至屏幕并换行
     private void direct_WRT(int t, int a)
     {
         if(stack.empty())
@@ -238,7 +244,7 @@ public class Exceuter {
             System.out.println("Output:"+stack.peek());
     }
 
-    //
+    //函数调用结束后,返回调用点并退栈
     private void direct_RET(int t, int a)
     {
         if(base_address == 0)
