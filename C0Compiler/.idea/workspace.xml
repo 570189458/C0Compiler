@@ -17,6 +17,7 @@
   </component>
   <component name="ProjectId" id="1SbNaX1VoyLhZFcZtNawqL1apl6" />
   <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="179" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -75,7 +76,9 @@
       <workItem from="1572417797985" duration="72000" />
       <workItem from="1572417891621" duration="1135000" />
       <workItem from="1572419046520" duration="1518000" />
-      <workItem from="1572420582579" duration="586000" />
+      <workItem from="1572420582579" duration="2944000" />
+      <workItem from="1572699282707" duration="3416000" />
+      <workItem from="1573022622740" duration="7186000" />
     </task>
     <servers />
   </component>
@@ -87,13 +90,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/Exceuter.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="8" />
+          <line>79</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/Exceuter.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="10" />
+          <line>154</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/Exceuter.java</url>
+          <line>17</line>
+          <properties field="DirectList" class="com.C0Compiler.Exceuter.Exceuter" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

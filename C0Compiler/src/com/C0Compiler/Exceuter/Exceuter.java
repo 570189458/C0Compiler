@@ -31,6 +31,11 @@ public class Exceuter {
         stack = new Stack<Integer>();
     }
 
+    public ArrayList<Direct> getDirectList()
+    {
+        return DirectList;
+    }
+
     public void init()
     {
         //初始化
@@ -169,9 +174,9 @@ public class Exceuter {
     private void direct_INT(int t, int a)
     {
         for (int i = 0; i < a; i++)
-    {
-        stack.push(0);
-    }
+        {
+            stack.push(0);
+        }
     }
 
     //无条件跳转至a地址
