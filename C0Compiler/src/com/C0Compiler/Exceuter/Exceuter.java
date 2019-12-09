@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -21,6 +22,8 @@ public class Exceuter {
     //初始化栈
     private Stack<Integer> stack;
 
+    private String out;
+
     Exceuter()
     {
         //初始化变量
@@ -35,17 +38,25 @@ public class Exceuter {
     {
         return DirectList;
     }
+    public String getOut() {return out;}
 
-    public void init()
+    public void init(String FileCatalogue)
     {
-        //初始化
-        System.out.println("Input C0 Direct File Catalogue");
-        String FileCatalogue;
-        FileCatalogue = sc.nextLine();
-        //打开文件
+//        //初始化
+//        System.out.println("Input C0 Direct File Catalogue");
+//        String FileCatalogue;
+//        FileCatalogue = sc.nextLine();
+//        //打开文件
+        out = "";
+        out+="<html>";
+        out+="<body>";
         readfile(FileCatalogue);
         execute();
+        out+="<body>";
+        out+="</html>";
     }
+
+    //<html><body>abc<br>bcd<body></html>
 
     //遍历所有指令进行解析
     private void execute()
@@ -54,6 +65,7 @@ public class Exceuter {
         {
             //System.out.println(current_index+" "+DirectList.size());
             System.out.println(DirectList.get(current_index).get_Direct_name()+" "+DirectList.get(current_index).get_t()+" "+DirectList.get(current_index).get_a());
+            //out+=DirectList.get(current_index).get_Direct_name()+" "+DirectList.get(current_index).get_t()+" "+DirectList.get(current_index).get_a()+"<br>";
 //            if(!stack.empty()) {
 //                System.out.println(stack.peek());
 //            }
@@ -234,7 +246,7 @@ public class Exceuter {
     //从命令行读入一个输入置于栈顶
     private void direct_RED(int t, int a)
     {
-        int tmpint = sc.nextInt();
+        int tmpint = ExceuterForm.inputDialog();
         stack.push(tmpint);
     }
 
@@ -245,8 +257,10 @@ public class Exceuter {
         {
             System.out.println("Stack Is Empty");
         }
-        else
-            System.out.println("Output:"+stack.peek());
+        else {
+            System.out.println("Output:" + stack.peek());
+            out+=stack.peek()+"<br>";
+        }
     }
 
     //函数调用结束后,返回调用点并退栈

@@ -2,7 +2,7 @@ package com.C0Compiler.Exceuter;
 
 import javax.swing.*;
 
-//C:\Users\XiuMing\Desktop\stack.txt
+
 public class Main {
 
 	public static void main(String[] args) {
