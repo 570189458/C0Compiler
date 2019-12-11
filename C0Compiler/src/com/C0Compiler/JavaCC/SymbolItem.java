@@ -12,7 +12,7 @@ public class SymbolItem {
     private int val;
     private int level;
     private int adr;
-    private int size;
+//    private int size;
     private int returnType;
 
     public SymbolItem(SymbolType type)

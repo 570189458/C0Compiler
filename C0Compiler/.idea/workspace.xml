@@ -20,7 +20,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="390" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -45,7 +45,14 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Adder (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Adder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Adder" />
+      <module name="C0Compiler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Adder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.C0Compiler.JavaCC.Adder" />
       <module name="C0Compiler" />
       <extension name="coverage">
@@ -58,19 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Adder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Adder" />
-      <module name="C0Compiler" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ComMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.C0Compiler.Compiler.ComMain" />
+      <option name="MAIN_CLASS_NAME" value="com.C0Compiler.word.ComMain" />
       <module name="C0Compiler" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.C0Compiler.Compiler.*" />
+          <option name="PATTERN" value="com.C0Compiler.word.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,7 +102,6 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Compiler" />
-        <item itemvalue="Application.Adder (1)" />
         <item itemvalue="Application.Adder" />
         <item itemvalue="Application.ComMain" />
       </list>
@@ -146,6 +145,9 @@
       <workItem from="1575446667906" duration="107000" />
       <workItem from="1575446795247" duration="1211000" />
       <workItem from="1575524536341" duration="134000" />
+      <workItem from="1575946433521" duration="5203000" />
+      <workItem from="1575971359734" duration="1312000" />
+      <workItem from="1576038823756" duration="161000" />
     </task>
     <servers />
   </component>
@@ -157,18 +159,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/Exceuter.java</url>
-          <line>166</line>
+          <line>165</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/ExceuterForm.java</url>
-          <line>94</line>
+          <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/UI.java</url>
+          <line>92</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/C0Compiler/Compiler/WordAnalysis.java</url>
+          <url>file://$PROJECT_DIR$/src/com/C0Compiler/word/WordAnalysis.java</url>
           <line>108</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/C0Compiler/Exceuter/Exceuter.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

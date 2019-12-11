@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -246,7 +245,7 @@ public class Exceuter {
     //从命令行读入一个输入置于栈顶
     private void direct_RED(int t, int a)
     {
-        int tmpint = ExceuterForm.inputDialog();
+        int tmpint = UI.inputDialog();
         stack.push(tmpint);
     }
 
